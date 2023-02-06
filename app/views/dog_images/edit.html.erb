@@ -1,0 +1,40 @@
+<div class="col-sm12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+
+  <h1>投稿画像編集</h1>
+    <div id="error_explanation">
+      <% if @dog.errors.any? %>
+      <h3><%= @dog.errors.count %> errors prohibited this obj from being saved:</h3>
+      <ul>
+        <% @dog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+
+  <%= form_with model:@dog, local:true do |f| %>
+    <div class="form-group">
+      <label for="dog_title">タイトル</label>
+      <%= f.text_field :title, autofocus: true, id:"dog_title", placeholder:"Title", class: "form-control dog_title", method: :get do %>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <label for="dog_image">写真編集</label>
+      <%= f.file_field :image, placeholder: "image", class: "form-control-file user_image", method: :get do %>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "変更する", class: "btn btn-success", method: :get do %>
+      <% end %>
+    </div>
+    <div>
+    <%= link_to "Show", dog_image_path(@dog) %>
+    |
+    <%= link_to "Back", dog_images_path %>
+    </div>
+  <% end %>
+
+
+</div>

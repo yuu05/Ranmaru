@@ -1,0 +1,48 @@
+<main>
+  <p id="notice"><%= flash[:notice] %></p>
+  <div class='container px-5 px-sm-0'>
+    <div class='row'>
+      <div class='col-md-3'>
+        <%= render 'layouts/sidebar', user: @user, dog: @dog %>
+      </div>
+
+      <div class='col-md-8 offset-md-1'>
+        <h2>写真詳細</h2>
+        <table class='table'>
+          <tbody>
+            <tr>
+              <div class="img-container">
+                <%= attachment_image_tag @dogs, :image, fallback: "default-image.jpg" %>
+              </div>
+              <br><%= l @dogs.created_at %>
+            </tr>
+            <tr>
+              <td>
+                <%= link_to @dogs.user do %>
+                  <%= attachment_image_tag @dogs.user, :profile_image,size:'80x80', fallback: "default-image.jpg" %>
+                  <br>
+                  <%= @dogs.user.name %>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to @dogs do %>
+                  <%= @dogs.title %>
+                <% end %>
+              </td>
+              <td>
+                <% if @dogs.user == current_user %>
+                  <%= link_to "編集", edit_dog_image_path(@dogs), class: "btn btn-sm btn-success" %>
+                <% end %>
+              </td>
+              <td>
+                <% if @dogs.user == current_user %>
+                  <%= button_to "削除", dog_image_path(@dogs), class: "btn btn-sm btn-danger", method: :delete %>
+                <% end %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

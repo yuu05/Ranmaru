@@ -1,0 +1,40 @@
+<div class="col-sm12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+
+  <h2>ユーザー情報</h2>
+    <div id="error_explanation">
+      <% if @user.errors.any? %>
+      <h3><%= @user.errors.count %> errors prohibited this obj from being saved:</h3>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+
+  <%= form_with model:@user, local:true do |f| %>
+    <div class="form-group">
+      <label for="user_name">なまえ</label>
+      <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"Name", class: "form-control name", method: :get do %>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <label for="user_image">ユーザー画像</label>
+      <%= f.file_field :profile_image, placeholder: "image", class: "form-control-file user_image", method: :get do %>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <label for="user_introduction">ひとこと</label>
+      <%= f.text_area :introduction, class: "form-control introduction", method: :get do %>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Update User", class: "btn btn-secondary", method: :get do %>
+      <% end %>
+    </div>
+
+  <% end %>
+</div>
