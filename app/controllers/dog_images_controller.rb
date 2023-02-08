@@ -22,7 +22,7 @@ class DogImagesController < ApplicationController
     @dog = DogImage.new(dog_image_params)
     @dog.user_id = current_user.id
     if @dog.save
-      redirect_to dog_images_path(@dog.id), notice: 'You have created image successfully.'
+      redirect_to dog_images_path(@dog.id), notice: '思い出は無事保存されました！'
     else
       @user = current_user
       @dogs = DogImage.all
@@ -33,7 +33,7 @@ class DogImagesController < ApplicationController
   def update
     @dog = DogImage.find(params[:id])
     if @dog.update(dog_image_params)
-      redirect_to dog_images_path(@dog.id), notice: 'You have update image successfully.'
+      redirect_to dog_images_path(@dog.id), notice: '無事変更しました！'
     else
       render :edit
     end

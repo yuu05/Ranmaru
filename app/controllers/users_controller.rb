@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(@user.id), notice: 'You have updated user successfully.'
+      redirect_to user_path(@user.id), notice: 'ユーザー情報は無事変更されました！'
     else
       render :edit
     end
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @dog = DogImage.new(dog_image_params)
     @dog.user_id = current_user.id
     if @dog.save
-      redirect_to dog_images_path(@dog.id), notice: 'You have created image successfully.'
+      redirect_to dog_images_path(@dog.id), notice: '思い出は無事保存されました！'
     else
       @user = current_user
       @dogs = DogImage.all
