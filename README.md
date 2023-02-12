@@ -1,24 +1,50 @@
-# README
+# らんまる（Ranmaru）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"らんまる"は犬を飼う家族に向けた写真投稿サイトです
+[写真準備中]
 
-Things you may want to cover:
+## サイト概要
 
-* Ruby version
+"らんまる"は犬を飼う家族に向けた写真投稿サイトです。
+アカウントを作成し、お手持ちの犬の写真を投稿することができます。
+他の写真投稿サイトのように「誰かに見てもらう」のではなく、「日記」のような投稿サイトです。
 
-* System dependencies
+## サイトテーマ
 
-* Configuration
+うちの犬専用のサイト
 
-* Database creation
+## テーマを選んだ理由
 
-* Database initialization
+私は SNS に犬の写真をあげるのが苦手でした。その理由は他人にいいねなどの評価される機能があるためです。
+有名なインフルエンサーのあげるペットの写真と、無名な私があげる写真では評価の差は見るまでも無いと思います。
+ですがうちの犬「蘭丸」がインフルエンサーのペットより劣っているとか、優劣は無いはずなのにまるで優劣があるかのように見えてしまう。
+結果写真をあげることはなく、スマホの写真フォルダーに他の写真と一緒に埋もれてしまう。
+このサイトを作ることでスマホの写真フォルダーよりちょっと特別な保存先を作って、犬の写真を撮るのが楽しくなればいいなと考えています。
 
-* How to run the test suite
+## ターゲットユーザ
 
-* Services (job queues, cache servers, search engines, etc.)
+ペットを飼っている人
+製作者である私自身
 
-* Deployment instructions
+## 主な利用シーン
 
-* ...
+日常、お出かけ先など
+
+## 設計書
+
+準備中
+
+### 機能一覧
+
+・画像投稿機能
+
+## 開発環境
+
+・OS
+-macOS Ventura 13.1
+・言語
+-HTML
+-CSS
+-Ruby 3.1.3
+・フレームワーク
+-Ruby on Rails 7.0.4.2

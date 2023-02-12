@@ -22,6 +22,11 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   pool: 5
+  host: <%= ENV['DB_HOSTNAME'] %>
+  port: <%= ENV['DB_PORT'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>

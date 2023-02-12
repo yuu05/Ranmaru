@@ -51,7 +51,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'sqlite3'
+  gem 'sqlite3', '1.5.4'
 end
 
 group :development do
@@ -79,4 +79,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
-gem 'pg', group: :production
+
+# PostgreSQLからMySQLに変更
+# gem 'pg', group: :production
+gem 'mysql2', '>= 0.4.4', '< 0.6.0' , group: :production
