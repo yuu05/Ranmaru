@@ -36,15 +36,15 @@
 
 ### 機能一覧
 
-・画像投稿機能
+-画像投稿機能
 
 ## 開発環境
 
-・OS
--macOS Ventura 13.1
-・言語
--HTML
--CSS
--Ruby 3.1.3
-・フレームワーク
--Ruby on Rails 7.0.4.2
+- OS
+  - macOS Ventura 13.1
+- 言語
+  - HTML
+  - CSS
+  - Ruby 3.1.3
+- フレームワーク
+  - Ruby on Rails 7.0.4.2
